@@ -38,7 +38,9 @@ public class TemporalAirProxyServiceImpl implements TemporalAirService {
     @Override
     public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws IOException, URISyntaxException, ParseException, CloneNotSupportedException {
         TemporalAir airReal = repository.getTemporalAirByLatitudeAndLongitude(latitude, longitude);
-        TemporalAir air = (TemporalAir) airReal.clone();
+        TemporalAir air = null;
+        if(airReal != null)
+            air = (TemporalAir) airReal.clone();
 
         if (air == null) { // First time querying
 
