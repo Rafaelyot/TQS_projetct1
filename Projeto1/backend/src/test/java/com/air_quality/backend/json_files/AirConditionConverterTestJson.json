@@ -1,0 +1,42 @@
+{
+  "date": 1546300800000,
+  "category": "category",
+  "color": "color",
+  "pollutants": {
+    "pollutant": null,
+    "no2": null,
+    "o3": null,
+    "pm10": null,
+    "pm25": null,
+    "so2": null,
+    "co": {
+      "concentration": null,
+      "display_name": "co",
+      "full_name": "co_full_name",
+      "aqi_information": null,
+      "sources_and_effects": null
+    },
+    "c6h6": null,
+    "ox": null,
+    "nh3": null,
+    "nmhc": null,
+    "no": null,
+    "nox": null,
+    "trs": null
+  },
+  "air_score": 0,
+  "dominant_pollutant": {
+    "name": "name",
+    "concentration": 0.0,
+    "units": "units"
+  },
+  "health_recommendations": {
+    "elderly": null,
+    "active": null,
+    "children": null,
+    "general_population": "population",
+    "lung_diseases": null,
+    "heart_diseases": null,
+    "pregnant_women": null
+  }
+}

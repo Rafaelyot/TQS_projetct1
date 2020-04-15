@@ -1,0 +1,64 @@
+{
+  "_links": {
+    "city:admin1_division": {
+      "href": "https://api.teleport.org/api/countries/iso_alpha2:PT/admin1_divisions/geonames:13/",
+      "name": "Leiria"
+    },
+    "city:alternate-names": {
+      "href": "https://api.teleport.org/api/cities/geonameid:2271650/alternate_names/"
+    },
+    "city:country": {
+      "href": "https://api.teleport.org/api/countries/iso_alpha2:PT/",
+      "name": "Portugal"
+    },
+    "city:timezone": {
+      "href": "https://api.teleport.org/api/timezones/iana:Europe%2FLisbon/",
+      "name": "Europe/Lisbon"
+    },
+    "curies": [
+      {
+        "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+        "name": "location",
+        "templated": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+        "name": "city",
+        "templated": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+        "name": "ua",
+        "templated": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+        "name": "country",
+        "templated": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+        "name": "a1",
+        "templated": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+        "name": "tz",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "https://api.teleport.org/api/cities/geonameid:2271650/"
+    }
+  },
+  "full_name": "Ansião, Leiria, Portugal",
+  "geoname_id": 2271650,
+  "location": {
+    "geohash": "ez45019qfmjjfbsw0bnr",
+    "latlon": {
+      "latitude": 39.91177,
+      "longitude": -8.43568
+    }
+  },
+  "name": "Ansião"
+}

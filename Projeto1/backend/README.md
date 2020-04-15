@@ -1,0 +1,9 @@
+- Current Conditions
+    - data_available
+    - indexes
+        - aqi
+        - category
+        - color ??
+        - dominant_pollutant
+            - (polluants)
+                - concentration
