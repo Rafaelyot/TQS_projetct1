@@ -2,7 +2,6 @@ package com.air_quality.backend.air_quality.temporal;
 
 import com.air_quality.backend.air_quality.utils.features.AirCondition;
 import com.air_quality.backend.cache_statistics.StatisticsService;
-import com.air_quality.backend.cache_statistics.StatisticsServiceImpl;
 import com.air_quality.backend.utils.DateTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

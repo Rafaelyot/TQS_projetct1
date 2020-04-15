@@ -4,14 +4,11 @@ import com.air_quality.backend.air_quality.current.Air;
 import com.air_quality.backend.air_quality.current.AirService;
 import com.air_quality.backend.air_quality.temporal.TemporalAir;
 import com.air_quality.backend.air_quality.temporal.TemporalAirService;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 
 
 @RestController
@@ -45,6 +42,7 @@ public class AirRestController {
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getLocalizedMessage(), e);
         }
+
     }
 
 

@@ -21,7 +21,7 @@ class RequestToolsTest {
     @SuppressWarnings("ResultOfMethodCallIgnored")
     @Test
     void testGet() throws Exception {
-        //JSONAssert.assertEquals(requestTools.get(URL), TestUtils.readJsonAsString("src/test/java/com/air_quality/backend/json_files/RequestToolsTestJson.json"), false);
+        JSONAssert.assertEquals(requestTools.get(URL), TestUtils.readJsonAsString("src/test/java/com/air_quality/backend/json_files/RequestToolsTestJson.json"), false);
     }
 
     @Test
@@ -45,8 +45,7 @@ class RequestToolsTest {
     void testMakeRequest() throws Exception {
         Map<String, String> params = new HashMap<>();
         //params.put("search", "ansiao");
-        assertThat(true,is(true));
-        //JSONAssert.assertEquals(requestTools.makeRequest(URL, params), TestUtils.readJsonAsString("src/test/java/com/air_quality/backend/json_files/RequestToolsTestJson.json"), false);
+        JSONAssert.assertEquals(requestTools.makeRequest(URL, params), TestUtils.readJsonAsString("src/test/java/com/air_quality/backend/json_files/RequestToolsTestJson.json"), false);
     }
 
 }

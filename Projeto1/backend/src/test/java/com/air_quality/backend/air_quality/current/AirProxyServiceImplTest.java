@@ -83,10 +83,10 @@ class AirProxyServiceImplTest {
         double longitude = 2.0;
 
         Air air = new Air(latitude, longitude, date);
-        //TestUtils.assertComparingFieldValues(this.airService.getAirConditionByDate(latitude, longitude, seconds), air);
-//
-        //verify(airRepository, VerificationModeFactory.times(1)).getAirByLatitudeAndLongitudeAndDate(latitude, longitude, date);
-        //reset(airRepository);
+        TestUtils.assertComparingFieldValues(this.airService.getAirConditionByDate(latitude, longitude, seconds), air);
+
+        verify(airRepository, VerificationModeFactory.times(1)).getAirByLatitudeAndLongitudeAndDate(latitude, longitude, date);
+        reset(airRepository);
     }
 
     @Test

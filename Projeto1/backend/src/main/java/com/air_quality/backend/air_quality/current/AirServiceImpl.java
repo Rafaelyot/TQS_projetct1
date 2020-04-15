@@ -4,7 +4,6 @@ import com.air_quality.backend.air_quality.utils.Utils;
 import com.air_quality.backend.air_quality.utils.features.AirCondition;
 import com.air_quality.backend.utils.DateTools;
 import com.air_quality.backend.utils.Serializer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

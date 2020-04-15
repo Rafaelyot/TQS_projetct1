@@ -81,9 +81,11 @@ class AirServiceImplTest {
         AirCondition airCondition2 = new AirCondition(now, 40, "Bad", "blue", null, null, null);
         air.setCurrentAirCondition(airCondition2);
         Air result = this.airService.getAirConditionByDate(latitude, longitude, dateSeconds);
-        //TestUtils.assertComparingFieldValues(air, result);
-//
-        //verify(serializer, VerificationModeFactory.times(1)).serializeAirByDate(2.0, 2.0, "2020-04-06T00:00:00", "historical");
+
+        TestUtils.assertComparingFieldValues(air, result);
+
+
+        verify(serializer, VerificationModeFactory.times(1)).serializeAirByDate(2.0, 2.0, "2020-04-06T00:00:00", "historical");
         reset(serializer);
 
     }

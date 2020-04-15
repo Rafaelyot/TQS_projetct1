@@ -2,7 +2,6 @@ package com.air_quality.backend.auto_complete;
 
 
 import com.air_quality.backend.cache_statistics.StatisticsService;
-import com.air_quality.backend.cache_statistics.StatisticsServiceImpl;
 import com.air_quality.backend.utils.DateTools;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +23,12 @@ public class CityProxyServiceImpl implements CityService {
 
     private CityService webService;
 
+    @Autowired
     private StatisticsService statisticsService;
 
     public CityProxyServiceImpl() {
         this.webService = new CityServiceImpl();
-        this.statisticsService = new StatisticsServiceImpl();
+
     }
 
     @Override
