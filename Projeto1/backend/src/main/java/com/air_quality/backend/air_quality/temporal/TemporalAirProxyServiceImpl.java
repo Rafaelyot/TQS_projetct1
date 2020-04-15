@@ -39,8 +39,13 @@ public class TemporalAirProxyServiceImpl implements TemporalAirService {
     public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws IOException, URISyntaxException, ParseException, CloneNotSupportedException {
         TemporalAir airReal = repository.getTemporalAirByLatitudeAndLongitude(latitude, longitude);
         TemporalAir air = null;
-        if(airReal != null)
-            air = (TemporalAir) airReal.clone();
+        if (airReal != null) {
+            air = new TemporalAir(airReal.getLatitude(), airReal.getLongitude(), airReal.getNumberHours());
+            air.setId(air.getId());
+            air.setTimestamp(airReal.getTimestamp());
+            air.setTemporalAirConditions(airReal.getTemporalAirConditions());
+        }
+
 
         if (air == null) { // First time querying
 
@@ -59,7 +64,9 @@ public class TemporalAirProxyServiceImpl implements TemporalAirService {
 
             else if (air.getTemporalAirConditions().size() < numberHours * 2) { // If data in cache had less values than number of hours requested
                 this.repository.delete(air);
-                air = this.save(this.webService.getHistoryAirConditions(latitude, longitude, numberHours));
+                TemporalAir nAir = this.webService.getHistoryAirConditions(latitude, longitude, numberHours);
+                nAir.setId(airReal.getId());
+                air = this.save(nAir);
 
 
             } else if (air.getTemporalAirConditions().size() > numberHours * 2) { // If data in cache had more values than number of hours requested

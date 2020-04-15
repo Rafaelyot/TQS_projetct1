@@ -47,15 +47,6 @@ class DateToolsTest {
         assertThat(DateTools.toString(date.getTime()),is(dateStr));
     }
 
-    @Test
-    void getCurrentDate() {
-        assert true;
-    }
-
-    @Test
-    void getDateMinusMilliSeconds() {
-        assert true;
-    }
 
 
 }

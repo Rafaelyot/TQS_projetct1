@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-public class TemporalAir implements Cloneable {
+public class TemporalAir {
 
     public static final int TTL = 10 * 60;
 
@@ -55,6 +55,10 @@ public class TemporalAir implements Cloneable {
         return timestamp;
     }
 
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
     public long getId() {
         return id;
     }
@@ -96,8 +100,5 @@ public class TemporalAir implements Cloneable {
     }
 
 
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 
 }

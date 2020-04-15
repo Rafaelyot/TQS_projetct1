@@ -37,7 +37,7 @@ class SerializerTest {
     private static final String TELEPORT_URL = "https://api.teleport.org/api/cities/";
     private static final String CITY_DETAILS_URL = "https://api.teleport.org/api/cities/geonameid:2271650/";
     private static final String BMURL = "https://api.breezometer.com/air-quality/v2/";
-    private static final String KEY = "b468bbad4b2d4377bd948e2dd85eb82f";
+    private static final String KEY = "afb0f2b8423e4ef8bc92b2b62f9e1528";
     private static final String FEATURES = "breezometer_aqi,health_recommendations,sources_and_effects,dominant_pollutant_concentrations,pollutants_concentrations,pollutants_aqi_information";
     private static final String cityName = "ansiao";
 
