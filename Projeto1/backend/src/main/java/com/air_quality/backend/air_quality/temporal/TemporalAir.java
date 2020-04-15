@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-public class TemporalAir {
+public class TemporalAir implements Cloneable {
 
     public static final int TTL = 10 * 60;
 
@@ -94,4 +94,10 @@ public class TemporalAir {
     public void setNumberHours(int numberHours) {
         this.numberHours = numberHours;
     }
+
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
 }

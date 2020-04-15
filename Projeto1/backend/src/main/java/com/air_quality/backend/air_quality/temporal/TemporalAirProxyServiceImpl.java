@@ -11,6 +11,7 @@ import javax.transaction.Transactional;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -35,8 +36,9 @@ public class TemporalAirProxyServiceImpl implements TemporalAirService {
 
 
     @Override
-    public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws IOException, URISyntaxException, java.text.ParseException {
-        TemporalAir air = repository.getTemporalAirByLatitudeAndLongitude(latitude, longitude);
+    public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws IOException, URISyntaxException, ParseException, CloneNotSupportedException {
+        TemporalAir airReal = repository.getTemporalAirByLatitudeAndLongitude(latitude, longitude);
+        TemporalAir air = (TemporalAir) airReal.clone();
 
         if (air == null) { // First time querying
 

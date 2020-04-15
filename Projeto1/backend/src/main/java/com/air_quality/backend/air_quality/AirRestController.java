@@ -9,6 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.text.ParseException;
 
 
 @RestController
@@ -36,12 +39,12 @@ public class AirRestController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(path = "/history/lat={latitude}&long={longitude}&hours={numberHours}", produces = "application/json")
-    public TemporalAir getHistory(@PathVariable double latitude, @PathVariable double longitude, @PathVariable int numberHours) {
-        try {
+    public TemporalAir getHistory(@PathVariable double latitude, @PathVariable double longitude, @PathVariable int numberHours) throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
+       // try {
             return temporalAirService.getHistoryAirConditions(latitude, longitude, numberHours);
-        } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getLocalizedMessage(), e);
-        }
+      //  } catch (Exception e) {
+      //      throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getLocalizedMessage(), e);
+      //  }
 
     }
 

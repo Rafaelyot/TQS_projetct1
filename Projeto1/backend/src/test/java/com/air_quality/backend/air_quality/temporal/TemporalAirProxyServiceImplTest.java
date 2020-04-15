@@ -56,7 +56,7 @@ class TemporalAirProxyServiceImplTest {
 
 
     @BeforeEach
-    void setUp() throws ParseException, IOException, URISyntaxException {
+    void setUp() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 1.0;
         double longitude = 1.0;
         int numberHours = 2;
@@ -76,7 +76,7 @@ class TemporalAirProxyServiceImplTest {
 
 
     @Test
-    void whenGetHistoryAirConditionsSameHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsSameHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 1.0;
         double longitude = 1.0;
         int numberHours = 2;
@@ -92,7 +92,7 @@ class TemporalAirProxyServiceImplTest {
     }
 
     @Test
-    void whenGetHistoryAirConditionsLessHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsLessHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 1.0;
         double longitude = 1.0;
         int numberHours = 1;
@@ -117,7 +117,7 @@ class TemporalAirProxyServiceImplTest {
     }
 
     @Test
-    void whenGetHistoryAirConditionsMoreHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsMoreHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 1.0;
         double longitude = 1.0;
         int numberHours = 3;
@@ -143,7 +143,7 @@ class TemporalAirProxyServiceImplTest {
 
 
     @Test
-    void whenGetHistoryAirConditionsNoHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsNoHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 1.0;
         double longitude = 1.0;
         int numberHours = 3;
@@ -159,7 +159,7 @@ class TemporalAirProxyServiceImplTest {
     }
 
     @Test
-    void whenGetHistoryAirConditionsFirstTime_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsFirstTime_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 0.0;
         double longitude = 0.0;
 
@@ -180,7 +180,7 @@ class TemporalAirProxyServiceImplTest {
     }
 
     @Test
-    void whenGetHistoryAirConditionsFirstTimeInvalidHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException {
+    void whenGetHistoryAirConditionsFirstTimeInvalidHours_thenTemporalAirShouldBeFound() throws ParseException, IOException, URISyntaxException, CloneNotSupportedException {
         double latitude = 0.0;
         double longitude = 0.0;
 

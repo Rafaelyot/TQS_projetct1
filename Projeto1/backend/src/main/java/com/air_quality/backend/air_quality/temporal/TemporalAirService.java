@@ -9,7 +9,7 @@ import java.net.URISyntaxException;
 
 public interface TemporalAirService {
 
-    public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws URISyntaxException, IOException, java.text.ParseException;
+    public TemporalAir getHistoryAirConditions(double latitude, double longitude, int numberHours) throws URISyntaxException, IOException, java.text.ParseException, CloneNotSupportedException;
 
     public TemporalAir save(TemporalAir air);
 }
